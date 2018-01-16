@@ -3,10 +3,6 @@ package mindgame;
 import javax.swing.JButton;
 
 public class Box{
-	static final int X = 1;
-	static final int O = 2;
-	static final int NONE = 0;
-
 	static final Boolean isValid[][]=
 	{{false,true,false,true,true,false,false,false,false},
 	{true,false,true,true,true,true,false,false,false},
@@ -24,17 +20,17 @@ public class Box{
 	public Box(){
 		isSet = false;
 		btn = new JButton();
-		currentValue = NONE;
+		currentValue = Player.NONE;
 		update();
 	}
 
 	public void update(){
-		if(currentValue==NONE){
+		if(currentValue==Player.NONE){
 			btn.setText("");	
 		}
-		else if(currentValue==X){
+		else if(currentValue==Player.X){
 			btn.setText("X");	
-		}else if(currentValue==O){
+		}else if(currentValue==Player.O){
 			btn.setText("O");	
 		}
 	}
