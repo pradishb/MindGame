@@ -66,5 +66,6 @@ public class GameFrame extends JFrame implements ActionListener,WinnerListener{
 		else{
 			JOptionPane.showMessageDialog(this, "The winner is Player O !!!");	
 		}
+		dispose();
 	}
 }
